@@ -16,9 +16,6 @@ end
 map(NORMAL, {
     -- NvimTreeToggle
     [":NvimTreeToggle<CR>"] = "<C-\\>",
-    -- BufferLine
-    [":BufferLineCyclePrev<CR>"] = "gt",
-    [":BufferLineCycleNext<CR>"] = "gT",
     -- lsp
     [":lua vim.lsp.buf.definition()<CR>"]     = "gd",          -- 声明
     [":lua vim.lsp.buf.declaration()<CR>"]    = "gD",          -- 定义
