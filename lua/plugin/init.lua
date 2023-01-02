@@ -39,4 +39,8 @@ return packer.startup(function(use)
         "akinsho/bufferline.nvim",
         requires = "kyazdani42/nvim-web-devicons",
     }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 end)
