@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://ghproxy.com/https://github.com/williamboman/mason.nvim"
   },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
+    url = "https://ghproxy.com/https://github.com/hrsh7th/nvim-cmp"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",

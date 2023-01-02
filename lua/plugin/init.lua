@@ -49,4 +49,9 @@ return packer.startup(function(use)
         "neovim/nvim-lspconfig",
         "williamboman/mason-lspconfig.nvim",
     }
+    -- 自动补全
+    use {
+        "hrsh7th/nvim-cmp",
+        -- 补全内容来源
+    }
 end)
