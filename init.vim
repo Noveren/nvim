@@ -6,5 +6,5 @@ lua require("plugin.nvim-tree")
 lua require("plugin.bufferline")
 lua require("plugin.lualine")
 
-lua require("lsp.init")
-lua require("lsp.lua")
+" lua require("lsp.init")
+" lua require("lsp.lua")
