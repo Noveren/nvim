@@ -1,6 +1,6 @@
 -- 设置 <leader> 为 <space>
 vim.g.mapleader     = " "
-vim.gmaplocalleader = " "
+vim.g.maplocalleader = " "
 -- 设置 快捷键 
 local NORMAL = "n"
 local map = function(mode, settings)
@@ -15,8 +15,13 @@ end
 
 map(NORMAL, {
     -- NvimTreeToggle
-    [":NvimTreeToggle<CR>"] = "<C-\\>", 
+    [":NvimTreeToggle<CR>"] = "<C-\\>",
     -- BufferLine
     [":BufferLineCyclePrev<CR>"] = "gt",
     [":BufferLineCycleNext<CR>"] = "gT",
+    -- lsp
+    [":lua vim.lsp.buf.definition()<CR>"]     = "gd",          -- 声明
+    [":lua vim.lsp.buf.declaration()<CR>"]    = "gD",          -- 定义
+    [":lua vim.lsp.buf.hover()<CR>"]          = "gh",          -- 提示
+    [":lua vim.lsp.buf.implementation()<CR>"] = "gi",          -- 实现
 })

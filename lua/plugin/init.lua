@@ -43,4 +43,10 @@ return packer.startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    -- LSP 语言服务器
+    use {
+        "williamboman/mason.nvim",
+        "neovim/nvim-lspconfig",
+        "williamboman/mason-lspconfig.nvim",
+    }
 end)
