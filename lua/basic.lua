@@ -28,7 +28,7 @@ set {
     listchars   = "space:.",
 }
 
-set.swapfile = true			-- swapfile
+set.swapfile = true         -- swapfile
 set.mouse    = ""           -- 鼠标模式
 
 set.termguicolors = true    -- 允许 24-bits 颜色
