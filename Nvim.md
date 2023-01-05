@@ -4,7 +4,7 @@ Neovim 配置文件有默认路径（如下），同时通过由环境变量 `XD
 Unix    ~/.config/nvim/init.vim
 Windows ~/AppData/Local/nvim/init.vim
 ```
-
+test
 Neovim 配置目录结构规定如下
 
 ```shell

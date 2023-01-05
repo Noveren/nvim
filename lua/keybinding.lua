@@ -14,7 +14,10 @@ local map = function(mode, settings)
 end
 
 map(NORMAL, {
-    -- NvimTreeToggle
+    -- TODO 给 BufferLinePrev 和 BufferLineNext 添加快捷键, 插件覆盖了 gt 的功能
+    -- TODO 如何配置插件载入后在设置快捷键绑定 
+    -- TODO BufferLine 插件将 buffers 映射到 tabs, 因此 gt/gT 无效, 需要设置命令映射
+    -- NvimTree
     [":NvimTreeToggle<CR>"] = "<C-\\>",
     -- lsp
     [":lua vim.lsp.buf.definition()<CR>"]     = "gd",          -- 声明
