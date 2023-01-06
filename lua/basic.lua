@@ -44,3 +44,8 @@ set {
     cursorline     = true,   -- 高亮鼠标所在行
     signcolumn     = "yes",  -- 行图标指示列
 }
+-- 搜索
+set {
+    ignorecase     = false,   -- 忽略大小写
+    smartcase      = false,   -- 智能大小写
+}
