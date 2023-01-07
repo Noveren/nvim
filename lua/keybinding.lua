@@ -1,5 +1,5 @@
 -- 设置 <leader> 为 <space>
-vim.g.mapleader     = " "
+vim.g.mapleader      = " "
 vim.g.maplocalleader = " "
 -- 设置 快捷键 
 local NORMAL = "n"
@@ -24,4 +24,7 @@ map(NORMAL, {
     [":lua vim.lsp.buf.declaration()<CR>"]    = "gD",          -- 定义
     [":lua vim.lsp.buf.hover()<CR>"]          = "gh",          -- 提示
     [":lua vim.lsp.buf.implementation()<CR>"] = "gi",          -- 实现
+    -- TODO 整体上下移动行, 目前只支持 NORMAL 模式下, 上下移动单行
+    [":m-2<CR>"] = "<C-UP>",
+    [":m+1<CR>"] = "<C-DOWN>",
 })
