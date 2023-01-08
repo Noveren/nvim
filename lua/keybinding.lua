@@ -3,6 +3,7 @@ vim.g.mapleader      = " "
 vim.g.maplocalleader = " "
 -- 设置 快捷键 
 local NORMAL = "n"
+local INSERT = "i"
 local map = function(mode, settings)
     local OPT = {
         noremap = true,

@@ -340,5 +340,11 @@ option	::=
 :!{cmd}
 ```
 
+### 4.8 自动命令
+
+```shell
+:autocmd [group] events pattern [nested] command		# 注册自动命令
+```
+
 ## 5. Neovim
 
