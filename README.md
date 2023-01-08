@@ -346,5 +346,157 @@ option	::=
 :autocmd [group] events pattern [nested] command		# 注册自动命令
 ```
 
-## 5. Neovim
+### 4.9 用户命令
+
+```shell
+command!
+```
+
+## 5. Nvim 配置
+
+Neovim 配置文件有默认路径（如下），允许通过由环境变量 `XDG_CONFIG_HOME`指向 nvim 路径所在的根路径
+
+```shell
+Unix    ~/.config/nvim/init.vim					# init.lua
+Windows ~/AppData/Local/nvim/init.vim			# init.lua
+```
+
+**`init.vim/init.lua`**: 配置的入口文件，该文件将在启动时被执行，从而对 Nvim 进行用户配置
+
+```
+" vimscript 语法拓展
+lua <单行脚本>
+lua <<EOF
+	<多行脚本>
+EOF
+```
+
+**导入 Lua 脚本**：`require("<div>.<file>")` 或 `require("<div>/<file>")`，导入时，执行且执行一次脚本
+
+## 6. Nvim Lua API
+
+```lua
+for i in pairs(_G) do
+    print(i)					-- 打印环境中的模块
+end
+```
+
+```shell
+# _G 部分模块
+- jit\								# luajit
+- vim\
+  - regex							# 正则表达式支持
+  - loop							# 事件循环
+  - api
+  - fn								# 内建函数
+  - opt								# 通用配置项
+  - cmd								# 执行 string: vimscprit
+```
+
+### 6.1 配置项
+
+|  子空间   |      说明      |
+| :-------: | :------------: |
+|  `vim.o`  |      常规      |
+| `vim.wo`  |   窗口作用域   |
+| `vim.bo`  |  缓冲区作用域  |
+|  `vim.g`  |    全局变量    |
+| `vim.env` |    环境变量    |
+| `vim.opt` | 存放通用配置项 |
+
+## 7. 插件
+
+```
+~/.local/share/nvim/site/pack/packer/start				# Unix   插件存放路径
+$LOCALAPPDATA/nvim-data/site/pack/packer/start			# Window 插件存放路径
+```
+
+### 7.0 插件管理器 packer.nvim
+
+**自动安装**：TODO 脚本化
+
+**手动安装**：克隆 `github: wbthomason/packer.nvim` 项目至插件存放路径
+
+```lua
+-- nvim/lua/plugin/init.lua
+vim.cmd "packadd packer.nvim"					-- 载入插件管理器
+local ok, packer = pcall(require, "packer")		-- 载入 packer
+if not ok then
+    error("Failed to require Packer")
+end
+-- 初始化
+packer.init {
+    git = {
+        -- github clone 代理 ghproxy.com
+        default_url_format = "https://ghproxy.com/https://github.com/%s",
+    },
+    display = {
+        open_fn = function()
+            return require("packer.util").float {
+                border = "rounded",
+            }
+        end
+    },
+}
+-- 声明使用的插件, 插件将被自动安装、更新、卸载
+-- use "github-project"
+-- 更改 use 后, 需要重启 nvim
+-- 移除或注释 use 即视为卸载
+return packer.startup(function(use)
+    -- Packer.nvim 插件管理器 ( 自己管理自己 )
+    use "wbthomason/packer.nvim"
+end)
+```
+
+该脚本被执行后，有如下命令被注册
+
+```shell
+:PackerSync						# 安装、卸载、更新
+:PackerUpdate
+:PackerCompile
+:PackerClean					# 清除不可使用或未使用的插件
+```
+
+### 7.1 主题 gruvbox
+
+```lua
+-- gruvbox 主题
+use {
+    "ellisonleao/gruvbox.nvim",
+    requires = {"rktjmp/lush.nvim"}
+}
+```
+
+```lua
+vim.opt.background = "dark"
+vim.cmd("colorscheme gruvbox")
+```
+
+### 7.2 侧边栏文件树 nvim-tree
+
+```lua
+-- nvim-tree 侧边栏文件树
+use {
+    "kyazdani42/nvim-tree.lua",
+    requires = 'kyazdani42/nvim-web-devicons',
+}
+```
+
+需要特殊字体 Nerd-font
+
+### 7.3 缓冲区 Tab bufferline
+
+### 7.4 状态栏 lualine
+
+## 8. 语言服务器
+
+```lua
+-- LSPconfig
+use {
+	"neovim/nvim-lspconfig",
+    "williamboman/nvim-lsp-installer"
+}
+```
+
+
 
