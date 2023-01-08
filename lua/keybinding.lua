@@ -25,6 +25,8 @@ map(NORMAL, {
     [":lua vim.lsp.buf.declaration()<CR>"]    = "gD",          -- 定义
     [":lua vim.lsp.buf.hover()<CR>"]          = "gh",          -- 提示
     [":lua vim.lsp.buf.implementation()<CR>"] = "gi",          -- 实现
+    -- BufferLine
+
     -- TODO 整体上下移动行, 目前只支持 NORMAL 模式下, 上下移动单行
     [":m-2<CR>"] = "<C-UP>",
     [":m+1<CR>"] = "<C-DOWN>",

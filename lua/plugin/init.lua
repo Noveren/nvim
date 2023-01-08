@@ -24,6 +24,10 @@ packer.init {
 return packer.startup(function(use)
     -- Packer.nvim 插件管理器
     use "wbthomason/packer.nvim"
+    -- comment 注释
+    -- use {
+    --     "numToStr/Comment.nvim",
+    -- }
     -- gruvbox 主题
     use {
         "ellisonleao/gruvbox.nvim",

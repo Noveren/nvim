@@ -12,7 +12,6 @@ setmetatable(set, {
         vim.opt[k] = v
     end
 })
-
 -- 配置项 ==================================================
 set.background = "dark"
 vim.cmd("colorscheme gruvbox")
