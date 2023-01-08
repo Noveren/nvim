@@ -1,9 +1,15 @@
+local prefix = {
+    raw      = "https://",
+    ghproxy  = "https://ghproxy.com/https://",
+    gitclone = "https://gitclone.com/",
+}
+
 require("mason").setup {
     -- lsp 包安装路径
     install_root_dir = vim.fn.stdpath("data") .. "/mason",
     -- github 包下载模板
     github = {
-        download_url_template = "https://ghproxy.com/https://github.com/%s/releases/download/%s/%s",
+        download_url_template = prefix.ghproxy .. "github.com/%s/releases/download/%s/%s",
     },
     ui = {
         border = "none",

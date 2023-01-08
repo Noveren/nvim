@@ -8,14 +8,14 @@ if not ok then
 end
 
 local prefix = {
-    raw      = "",
-    ghproxy  = "https://ghproxy.com/",
+    raw      = "https://",
+    ghproxy  = "https://ghproxy.com/https://",
     gitclone = "https://gitclone.com/",
 }
 
 packer.init {
     git = {
-        default_url_format = prefix["gitclone"] .. "github.com/%s",
+        default_url_format = prefix.gitclone .. "github.com/%s",
     },
     display = {
         open_fn = function()

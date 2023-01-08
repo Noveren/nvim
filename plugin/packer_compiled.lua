@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\10791\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?.lua;C:\\Users\\10791\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\10791\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\10791\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\10791\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\lua\\5.1\\?.so"
+local package_path_str = "/Users/nidolee/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/nidolee/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/nidolee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/nidolee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/nidolee/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,77 +76,77 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["bufferline.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://gitclone.com/github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://gitclone.com/github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://gitclone.com/github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-vsnip"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-vsnip",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://gitclone.com/github.com/hrsh7th/cmp-vsnip"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://gitclone.com/github.com/ellisonleao/gruvbox.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://gitclone.com/github.com/nvim-lualine/lualine.nvim"
   },
   ["lush.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lush.nvim",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://gitclone.com/github.com/rktjmp/lush.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://gitclone.com/github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://gitclone.com/github.com/williamboman/mason.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://gitclone.com/github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://gitclone.com/github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://gitclone.com/github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://gitclone.com/github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://gitclone.com/github.com/wbthomason/packer.nvim"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip",
+    path = "/Users/nidolee/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://gitclone.com/github.com/hrsh7th/vim-vsnip"
   }
 }
