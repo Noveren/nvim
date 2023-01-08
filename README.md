@@ -591,9 +591,9 @@ vim.lsp.buf.code_action()
 
 ```lua
 use {
-	"williamboman/mason.nvim",
-    "neovim/nvim-lspconfig",
-    "williamboman/mason-lspconfig.nvim",
+	"williamboman/mason.nvim",				-- 管理器
+    "neovim/nvim-lspconfig",				-- LSP 配置器
+    "williamboman/mason-lspconfig.nvim",	-- 辅助管理器 ( 设置下载项 )
 }
 ```
 
@@ -604,4 +604,19 @@ use {
 ```
 
 + **安装 LSP**: 在 `mason-lspconfig` 的 `setup` 中选择支持的 LSP, 然后重启执行 `:LspInstall` 按提示安装
+
+```lua
+-- LSP 配置
+require("lspconfig").lsp_name.setup {
+    on_attach = function(client, bufnr)
+    end,
+    flags = {
+        
+    }
+}
+```
+
+
+
+### 8.3 Python ruff-lsp
 
