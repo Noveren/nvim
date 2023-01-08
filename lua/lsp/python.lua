@@ -1,4 +1,5 @@
-require("lspconfig").ruff_lsp.setup { }
+require("lspconfig").pylsp.setup { }
+-- require("lspconfig").ruff_lsp.setup { }    -- ruff 与 pylsp 的静态检查功能重合
 
 -- local opts = { noremap=true, silent=true }
 -- vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)

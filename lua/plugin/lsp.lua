@@ -29,6 +29,7 @@ require("mason-lspconfig").setup {
     -- 需要安装的 lsp 包, 包名查看 mason-lspconfig/README.md
     ensure_installed = {
         "sumneko_lua",              -- lua
+        "pylsp",                    -- python
         "ruff_lsp",                 -- python
     },
 }

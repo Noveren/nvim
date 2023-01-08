@@ -15,6 +15,5 @@ require("plugin.lualine")
 require("plugin.nvim-cmp")
 
 -- 语言服务器 ( 注释配置文件即为禁止相应的lsp启动 )
-require("plugin.lsp")
 -- require("lsp.lua")
 -- require("lsp.python")
