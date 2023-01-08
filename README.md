@@ -404,7 +404,71 @@ end
 | `vim.env` |    环境变量    |
 | `vim.opt` | 存放通用配置项 |
 
-### 6.2 快捷键
+### 6.2 按键映射
+
+```lua
+-- 全局映射 ( 另有缓冲区映射 nvim_buf_ )
+vim.api.nvim_set_keymap()
+vim.api.nvim_get_keymap()
+vim.api.nvim_del_keymap()
+```
+
+```lua
+-- 将 lhs 映射为 rhs
+vim.api.nvim_set_keymap(
+    mode,				-- string   模式
+    lhs,				-- string	按键; 若为 "" 或 "<NOP>" 则表示禁用 rhs
+    rhs,				-- string	按键、:command-line<CR> ( 需要 : 和 <CR> )
+    opt					-- table	选项
+)
+[[	:help key-notation
+	<leader>
+	<CR>			回车键, 一般跟在命令行最后
+	<Space>			空格键; 直接空格也可
+	<C-...>			Control
+	<S-...>			Shift
+	<M-...>			Alt or Command
+	<Nop>
+]]
+```
+
+|                   模式                   | 字符串 |  等效   |
+| :--------------------------------------: | :----: | :-----: |
+| Normal, Visual, Select, Operator-pending |  `''`  | `:map`  |
+|                  Normal                  | `'n'`  | `:nmap` |
+|                  Insert                  | `'i'`  | `:imap` |
+
+粘滞键:
+
+```lua
+vim.g.mapleader = "按键"
+vim.g.maplocalleader = "按键"
+```
+
+```lua
+vim.keymap.set(
+	mode,			-- string
+    lhs,			-- string
+    rhs,			-- string | function
+    opt,			-- table 可选选项
+)
+opt = {
+    desc = "描述信息"
+}
+```
+
+### 6.3 用户命令
+
+```lua
+vim.api.nvim_create_user_command(
+    name,			-- string 				开头必须为大写字母
+    command,		-- string | function	建议直接使用 lua 函数
+    opt,			-- table
+)
+opt = {
+    nargs = x,		-- number 参数个数
+}
+```
 
 
 
@@ -502,20 +566,42 @@ use.{
     "hrsh7th/cmp-vsnip",
     "hrsh7th/vim-vsnip",
     -- 补全内容来源
-    "hrsh7th/cmp-nvim-lsp",		-- 内置.LSP
+    "hrsh7th/cmp-nvim-lsp",		-- 内置 LSP
     "hrsh7th/cmp-buffer",  		-- 缓冲区内容
 }
 ```
 
 ## 8. 语言服务器
 
+> Nvim 内建 LSP 客户端接口, 因此只需要管理 LSP 服务端
+
+### 8.1 Nvim-LSP API
+
 ```lua
--- LSPconfig
+vim.lsp.buf.hover()				-- 在 hover-window 展示关于当前光标所在的符号的信息
+vim.lsp.buf.format()
+vim.lsp.buf.references()
+vim.lsp.buf.implementation()
+vim.lsp.buf.definition()
+vim.lsp.buf.declaration()
+vim.lsp.buf.code_action()
+```
+
+### 8.2 配置管理器 mason
+
+```lua
 use {
-	"neovim/nvim-lspconfig",
-    "williamboman/nvim-lsp-installer"
+	"williamboman/mason.nvim",
+    "neovim/nvim-lspconfig",
+    "williamboman/mason-lspconfig.nvim",
 }
 ```
 
+```shell
+:LspInfo					# 查询当前运行的语言服务器情况 lspconfig
+:LspInstall [<server>...]	# 安装 mason-lspconfig
+:LspUninstall [<server>...] # 卸载 mason-lspconfig
+```
 
++ **安装 LSP**: 在 `mason-lspconfig` 的 `setup` 中选择支持的 LSP, 然后重启执行 `:LspInstall` 按提示安装
 

@@ -14,4 +14,12 @@ cmp.setup {
     }, {
         { name = "buffer"   },
     }),
+    -- 按键映射
+    mapping = cmp.mapping.preset.insert {
+        -- 仅在补全窗口出现时才有效的按键映射
+        ["<Esc>"]  = cmp.mapping.abort(),
+        ["<Tab>"]   = cmp.mapping.confirm({ select = true }),
+        ["<Up>"]   = cmp.mapping.select_prev_item(),
+        ["<Down>"] = cmp.mapping.select_next_item(),
+    },
 }
