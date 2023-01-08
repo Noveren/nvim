@@ -13,7 +13,7 @@ local map = function(mode, settings)
         vim.api.nvim_set_keymap(mode, new, old, OPT)
     end
 end
-
+require("test")
 map(NORMAL, {
     -- TODO 给 BufferLinePrev 和 BufferLineNext 添加快捷键, 插件覆盖了 gt 的功能
     -- TODO 如何配置插件载入后在设置快捷键绑定 
