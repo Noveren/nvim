@@ -77,57 +77,77 @@ _G.packer_plugins = {
   ["bufferline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
-    url = "https://ghproxy.com/https://github.com/akinsho/bufferline.nvim"
+    url = "https://gitclone.com/github.com/akinsho/bufferline.nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
+    url = "https://gitclone.com/github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
+    url = "https://gitclone.com/github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-vsnip",
+    url = "https://gitclone.com/github.com/hrsh7th/cmp-vsnip"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",
-    url = "https://ghproxy.com/https://github.com/ellisonleao/gruvbox.nvim"
+    url = "https://gitclone.com/github.com/ellisonleao/gruvbox.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
-    url = "https://ghproxy.com/https://github.com/nvim-lualine/lualine.nvim"
+    url = "https://gitclone.com/github.com/nvim-lualine/lualine.nvim"
   },
   ["lush.nvim"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lush.nvim",
-    url = "https://ghproxy.com/https://github.com/rktjmp/lush.nvim"
+    url = "https://gitclone.com/github.com/rktjmp/lush.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
-    url = "https://ghproxy.com/https://github.com/williamboman/mason-lspconfig.nvim"
+    url = "https://gitclone.com/github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
-    url = "https://ghproxy.com/https://github.com/williamboman/mason.nvim"
+    url = "https://gitclone.com/github.com/williamboman/mason.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
-    url = "https://ghproxy.com/https://github.com/hrsh7th/nvim-cmp"
+    url = "https://gitclone.com/github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
-    url = "https://ghproxy.com/https://github.com/neovim/nvim-lspconfig"
+    url = "https://gitclone.com/github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
-    url = "https://ghproxy.com/https://github.com/kyazdani42/nvim-tree.lua"
+    url = "https://gitclone.com/github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
-    url = "https://ghproxy.com/https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://gitclone.com/github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
-    url = "https://ghproxy.com/https://github.com/wbthomason/packer.nvim"
+    url = "https://gitclone.com/github.com/wbthomason/packer.nvim"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "C:\\Users\\10791\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip",
+    url = "https://gitclone.com/github.com/hrsh7th/vim-vsnip"
   }
 }
 

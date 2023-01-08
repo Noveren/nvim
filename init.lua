@@ -12,9 +12,7 @@ require("plugin.init")
 require("plugin.nvim-tree")
 require("plugin.bufferline")
 require("plugin.lualine")
-
+require("plugin.nvim-cmp")
 -- 语言服务器
 -- lua require("lsp.init")
 -- lua require("lsp.lua")
-
-

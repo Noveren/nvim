@@ -488,6 +488,21 @@ use {
 
 ### 7.4 状态栏 lualine
 
+### 7.5 自动补全 nvim-cmp
+
+```lua
+-- 自动补全
+use.{
+    "hrsh7th/nvim-cmp",
+    -- 代码片段引擎
+    "hrsh7th/cmp-vsnip",
+    "hrsh7th/vim-vsnip",
+    -- 补全内容来源
+    "hrsh7th/cmp-nvim-lsp",		-- 内置.LSP
+    "hrsh7th/cmp-buffer",  		-- 缓冲区内容
+}
+```
+
 ## 8. 语言服务器
 
 ```lua

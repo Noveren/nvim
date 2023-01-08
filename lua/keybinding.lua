@@ -20,6 +20,7 @@ map(NORMAL, {
     -- TODO BufferLine 插件将 buffers 映射到 tabs, 因此 gt/gT 无效, 需要设置命令映射
     -- NvimTree
     [":NvimTreeToggle<CR>"] = "<C-\\>",
+    -- nvim-cmp
     -- lsp
     [":lua vim.lsp.buf.definition()<CR>"]     = "gd",          -- 声明
     [":lua vim.lsp.buf.declaration()<CR>"]    = "gD",          -- 定义

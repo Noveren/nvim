@@ -7,10 +7,15 @@ if not ok then
     error("Failed to require Packer")
 end
 
+local prefix = {
+    raw      = "",
+    ghproxy  = "https://ghproxy.com/",
+    gitclone = "https://gitclone.com/",
+}
+
 packer.init {
     git = {
-        -- github clone 代理 ghproxy.com
-        default_url_format = "https://ghproxy.com/https://github.com/%s",
+        default_url_format = prefix["gitclone"] .. "github.com/%s",
     },
     display = {
         open_fn = function()
@@ -28,7 +33,7 @@ return packer.startup(function(use)
     -- use {
     --     "numToStr/Comment.nvim",
     -- }
-    -- gruvbox 主题
+    -- 主题 gruvbox
     use {
         "ellisonleao/gruvbox.nvim",
         requires = {"rktjmp/lush.nvim"}
@@ -47,15 +52,20 @@ return packer.startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    -- 自动补全
+    use {
+        "hrsh7th/nvim-cmp",
+        -- 代码片段引擎
+        "hrsh7th/cmp-vsnip",
+        "hrsh7th/vim-vsnip",
+        -- 补全内容来源
+        "hrsh7th/cmp-nvim-lsp",             -- 内置 LSP
+        "hrsh7th/cmp-buffer",               -- 缓冲区内容
+    }
     -- LSP 语言服务器
     use {
         "williamboman/mason.nvim",
         "neovim/nvim-lspconfig",
         "williamboman/mason-lspconfig.nvim",
-    }
-    -- 自动补全
-    use {
-        "hrsh7th/nvim-cmp",
-        -- 补全内容来源
     }
 end)
