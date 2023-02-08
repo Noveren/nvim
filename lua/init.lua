@@ -1,11 +1,5 @@
--- 打印环境模块
--- for i in pairs(_G.vim) do
---     print(i)
--- end
-print(package.path)
--- 基础配置
-require("basic")
-require("keybinding")
+-- 通用配置
+require "common"
 
 -- 插件加载
 require("plugin.init")
