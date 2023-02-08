@@ -2,7 +2,7 @@
 -- for i in pairs(_G.vim) do
 --     print(i)
 -- end
-
+print(package.path)
 -- 基础配置
 require("basic")
 require("keybinding")
