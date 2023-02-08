@@ -41,4 +41,25 @@ mod.keymap = function(maps)
     end
 end
 
+--[[
+
+--]]
+mod.load = function(arg)
+    if type(arg) == "string" then
+        require(arg)
+        return
+    end
+    if type(arg) == "table" then
+        if arg.main ~= nil then
+            require(arg.main)
+            if arg.with ~= nil then
+                for _, v in ipairs(arg.with) do
+                    require(v)
+                end
+            end
+        end
+        return
+    end
+end
+
 return mod

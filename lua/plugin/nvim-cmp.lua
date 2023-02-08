@@ -18,8 +18,8 @@ cmp.setup {
     mapping = cmp.mapping.preset.insert {
         -- 仅在补全窗口出现时才有效的按键映射
         ["<Esc>"]  = cmp.mapping.abort(),
-        ["<CR>"]   = cmp.mapping.confirm({ select = true }),
+        ["<Tab>"]  = cmp.mapping.confirm({ select = true }),
         ["<Up>"]   = cmp.mapping.select_prev_item(),
-        ["<Tab>"] = cmp.mapping.select_next_item(),
+        ["<Down>"] = cmp.mapping.select_next_item(),
     },
 }

@@ -1,10 +1,7 @@
-vim.cmd [[
-        set background=dark
-        colorscheme gruvbox
-    ]]
-
 local utils = require("utils")
+
 utils.set {
+    shortmess       = "atI",
     -- 
     swapfile        = true,
     mouse           = "",
@@ -30,3 +27,7 @@ utils.set {
     ignorecase     = false,
     smartcase      = false,
 }
+
+-- 设置 <leader> 为 <space>
+vim.g.mapleader      = " "
+vim.g.maplocalleader = " "
